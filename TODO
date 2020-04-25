@@ -1,0 +1,27 @@
+// TODO: Test call API, use local storage
+
+// TODO: Split cb-react-micro-frontend into
+  - cb-react-micro-frontend
+  - cb-react-micro-frontend-container
+  - cb-react-micro-frontend-overrides contains webpack config override
+  - cb-react-micro-frontend-server contains proxy logic
+  - cb-react-micro-frontend-core
+
+
+
+========= RESOLVED =========
+// TODO: how to apply Suspense and fallback or use another way for async rendering
+// TODO: Problem 1: all bundles loaded at first loading
+  - Use 'entrypoints' entries
+
+// TODO: Resolve chunk URL of dynamic imports
+  - use proxy
+  - cookies cleared when mount container and unmount MF
+  - cookies updated when change MF
+
+// TODO:  if (entry === manifest.files['main.js']) script.id = scriptId;
+  - should be resolve(entry) === resolve(manifest.files['main.js'])
+
+// TODO: BUG: When enter a nested route into navigation bar
+// TODO: Problem 2: how to use relative route
+// TODO: Test deep linking
