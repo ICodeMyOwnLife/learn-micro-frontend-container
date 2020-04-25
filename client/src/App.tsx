@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, Fragment } from 'react';
 import { Router } from 'react-router';
 import { Link } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
@@ -12,12 +12,9 @@ export const AppComponent: FC = () => (
     <nav>
       <Link to="/">Home</Link> |{' '}
       {routeProps.map(({ microFrontendName, path }) => (
-        <>
-          <Link key={microFrontendName} to={path}>
-            {microFrontendName}
-          </Link>{' '}
-          |{' '}
-        </>
+        <Fragment key={microFrontendName}>
+          <Link to={path}>{microFrontendName}</Link> |{' '}
+        </Fragment>
       ))}
     </nav>
     <nav>

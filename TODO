@@ -1,4 +1,9 @@
 // TODO: Test call API, use local storage
+// TODO: Test in other browsers
+// TODO: Test in production mode +/- remote server
+  - Deploy container to remote server
+// TODO: Handle errors/exceptions
+  - Fetch manifest and script.onerror
 
 // TODO: Split cb-react-micro-frontend into
   - cb-react-micro-frontend
