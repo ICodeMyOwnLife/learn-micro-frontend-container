@@ -1,11 +1,13 @@
-import React, { FC, memo, Fragment } from 'react';
-import { Router } from 'react-router';
+import React, { FC, memo, Fragment, lazy, Suspense } from 'react';
+import { Router, Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { MicroFrontendRoutes } from 'cb-react-micro-frontend';
+import { MicroFrontendRoute } from 'cb-react-micro-frontend';
 import routeProps from 'routeProps';
 
 const history = createBrowserHistory();
+const Login = lazy(() => import('containers/Login'));
+const ProductList = lazy(() => import('containers/ProductList'));
 
 export const AppComponent: FC = () => (
   <Router history={history}>
@@ -16,6 +18,7 @@ export const AppComponent: FC = () => (
           <Link to={path}>{microFrontendName}</Link> |{' '}
         </Fragment>
       ))}
+      <Link to="/login">Login</Link> | <Link to="/products">Products</Link>
     </nav>
     <nav>
       <Link to="/micro-frontend-1/home">MF1/Home</Link> |{' '}
@@ -25,10 +28,15 @@ export const AppComponent: FC = () => (
       <Link to="/micro-frontend-2/contact">MF2/Contact</Link> |{' '}
       <Link to="/micro-frontend-2/about">MF2/About</Link>
     </nav>
-    <MicroFrontendRoutes
-      fallback="Loading MicroFrontend"
-      routeProps={routeProps}
-    />
+    <Suspense fallback="Loading ...">
+      <Switch>
+        <Route component={Login} path="/login" />
+        <Route component={ProductList} path="/products" />
+        {routeProps.map(props => (
+          <MicroFrontendRoute {...props} key={props.microFrontendName} />
+        ))}
+      </Switch>
+    </Suspense>
   </Router>
 );
 

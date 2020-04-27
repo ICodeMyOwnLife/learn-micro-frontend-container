@@ -3,7 +3,6 @@ import { AddressInfo } from 'net';
 import { dirname, join } from 'path';
 import express from 'express';
 import morgan from 'morgan';
-import serveStatic from 'serve-static';
 import useProxy from './proxy';
 
 const dirClient = join(dirname(dirname(__dirname)), 'client');
@@ -12,7 +11,7 @@ console.log('dirClient', dirClient);
 const app = express();
 
 app.use(morgan('dev'));
-app.use(serveStatic(dirClientBuild));
+app.use(express.static(dirClientBuild));
 useProxy(app);
 app.get('/*', (_req, res) => {
   res.sendFile(join(dirClientBuild, 'index.html'));
