@@ -2727,10 +2727,10 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-cb-react-micro-frontend@^0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend/-/cb-react-micro-frontend-0.0.19.tgz#8d88c3e0b2ea8719a17118bc2e5fd70699baafca"
-  integrity sha512-QyA+ALQnmf0RKyFzBugYK76KWEyWAqQLpRgYffuBdPaQZEaw8zka/R6uM7m2ptFeDRFl4frQPmYjZkbxW0SLfA==
+cb-react-micro-frontend@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend/-/cb-react-micro-frontend-0.0.20.tgz#7ce05ec1e3491720529410f2f87793a64ce921e7"
+  integrity sha512-rGtk4lCp7BbjCOjKXfrLBZLyWYB2UsuYaNNCy+NcQDPqdSLVSaH8STG5ZNav3hqdXXFjGTZGeHZB/bV9/H5JFQ==
 
 chalk@2.4.2, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
