@@ -2727,6 +2727,18 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
+cb-react-micro-frontend-core@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-core/-/cb-react-micro-frontend-core-0.0.2.tgz#34f7ddcd76c5eb6d2d5904f40d4e57750c7914bc"
+  integrity sha512-5HeK2Hyjwmz+iw4AIhjF58sRRhx1S9klTMows5v8HSLoiVCRqbRLH5MMqK0oBRNXBXZqnTbcyZR4yNZLUjmpZQ==
+
+cb-react-micro-frontend-override@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-override/-/cb-react-micro-frontend-override-0.0.2.tgz#6665634d2e3936d247e45b5fe0194c7c1c527af3"
+  integrity sha512-lNknfKysuMYBFJEWDIWHp4MMU0qtTZS8bLJ328TjFcXo6NA+8/yi9Z4CQIW0DKkSk1oLOKFTHh5RfXoa2Uncqg==
+  dependencies:
+    cb-react-micro-frontend-core "^0.0.2"
+
 cb-react-micro-frontend@^0.0.20:
   version "0.0.20"
   resolved "https://registry.yarnpkg.com/cb-react-micro-frontend/-/cb-react-micro-frontend-0.0.20.tgz#7ce05ec1e3491720529410f2f87793a64ce921e7"

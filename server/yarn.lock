@@ -162,6 +162,18 @@ camelcase@^2.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
   integrity sha1-fB0W1nmhu+WcoCys7PsBHiAfWh8=
 
+cb-react-micro-frontend-core@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-core/-/cb-react-micro-frontend-core-0.0.2.tgz#34f7ddcd76c5eb6d2d5904f40d4e57750c7914bc"
+  integrity sha512-5HeK2Hyjwmz+iw4AIhjF58sRRhx1S9klTMows5v8HSLoiVCRqbRLH5MMqK0oBRNXBXZqnTbcyZR4yNZLUjmpZQ==
+
+cb-react-micro-frontend-server@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-server/-/cb-react-micro-frontend-server-0.0.6.tgz#00ea44f7f5489cb787f790dc9983afb5af9341a0"
+  integrity sha512-6+OMkYKQ6dYx0H2qEkmpyqC7FJdKPK666SVnw9i6Mw40lGmQRiLot9wAVqnkvrr42x8bR4yy3JROG9UgVhn5Rw==
+  dependencies:
+    cb-react-micro-frontend-core "^0.0.2"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
