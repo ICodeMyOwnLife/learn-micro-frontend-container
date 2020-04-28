@@ -9,16 +9,16 @@
     "start": "ts-node-dev src/index"
   },
   "dependencies": {
-    "cb-react-micro-frontend-server": "^0.0.6",
+    "cb-react-micro-frontend-server": "^0.0.7",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
     "@types/morgan": "^1.9.0",
-    "@types/node": "^13.13.2",
+    "@types/node": "^13.13.4",
     "@types/serve-static": "^1.13.3",
-    "ts-node": "^8.9.0",
+    "ts-node": "^8.9.1",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   }

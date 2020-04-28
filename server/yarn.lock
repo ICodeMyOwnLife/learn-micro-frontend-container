@@ -47,10 +47,15 @@
   dependencies:
     "@types/express" "*"
 
-"@types/node@*", "@types/node@^13.13.2":
+"@types/node@*":
   version "13.13.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.2.tgz#160d82623610db590a64e8ca81784e11117e5a54"
   integrity sha512-LB2R1Oyhpg8gu4SON/mfforE525+Hi/M1ineICEDftqNVTyFg1aRIeGuTvXAoWHc4nbrFncWtJgMmoyRvuGh7A==
+
+"@types/node@^13.13.4":
+  version "13.13.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.4.tgz#1581d6c16e3d4803eb079c87d4ac893ee7501c2c"
+  integrity sha512-x26ur3dSXgv5AwKS0lNfbjpCakGIduWU1DU91Zz58ONRWrIKGunmZBNv4P7N+e27sJkiGDsw/3fT4AtsqQBrBA==
 
 "@types/qs@*":
   version "6.9.1"
@@ -162,17 +167,17 @@ camelcase@^2.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
   integrity sha1-fB0W1nmhu+WcoCys7PsBHiAfWh8=
 
-cb-react-micro-frontend-core@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-core/-/cb-react-micro-frontend-core-0.0.2.tgz#34f7ddcd76c5eb6d2d5904f40d4e57750c7914bc"
-  integrity sha512-5HeK2Hyjwmz+iw4AIhjF58sRRhx1S9klTMows5v8HSLoiVCRqbRLH5MMqK0oBRNXBXZqnTbcyZR4yNZLUjmpZQ==
+cb-react-micro-frontend-core@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-core/-/cb-react-micro-frontend-core-0.0.3.tgz#2526434de8389613a0bdc5dd29f4257828c9aed6"
+  integrity sha512-6aZh4Lg91yEVH+IOX1nohO+On26ekeVDfEXbQteChsTpykyWe+cKPAU3AJvhgHDOMO4qJX0vT0EaVD3pcuhm/g==
 
-cb-react-micro-frontend-server@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-server/-/cb-react-micro-frontend-server-0.0.6.tgz#00ea44f7f5489cb787f790dc9983afb5af9341a0"
-  integrity sha512-6+OMkYKQ6dYx0H2qEkmpyqC7FJdKPK666SVnw9i6Mw40lGmQRiLot9wAVqnkvrr42x8bR4yy3JROG9UgVhn5Rw==
+cb-react-micro-frontend-server@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/cb-react-micro-frontend-server/-/cb-react-micro-frontend-server-0.0.7.tgz#e4af80e705aed50c8a085d234c54a4459f36b62f"
+  integrity sha512-WCqsxQ7TycP0rZ/Cc5DrZ41kp3qyt5dpyh54EbhzVITFDvAoyTvf+mNyoM/fZV8+GQLJbEYCaF0DzB/fzoDp8g==
   dependencies:
-    cb-react-micro-frontend-core "^0.0.2"
+    cb-react-micro-frontend-core "^0.0.3"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -943,10 +948,21 @@ ts-node-dev@^1.0.0-pre.44:
     ts-node "*"
     tsconfig "^7.0.0"
 
-ts-node@*, ts-node@^8.9.0:
+ts-node@*:
   version "8.9.0"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.9.0.tgz#d7bf7272dcbecd3a2aa18bd0b96c7d2f270c15d4"
   integrity sha512-rwkXfOs9zmoHrV8xE++dmNd6ZIS+nmHHCxcV53ekGJrxFLMbp+pizpPS07ARvhwneCIECPppOwbZHvw9sQtU4w==
+  dependencies:
+    arg "^4.1.0"
+    diff "^4.0.1"
+    make-error "^1.1.1"
+    source-map-support "^0.5.17"
+    yn "3.1.1"
+
+ts-node@^8.9.1:
+  version "8.9.1"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.9.1.tgz#2f857f46c47e91dcd28a14e052482eb14cfd65a5"
+  integrity sha512-yrq6ODsxEFTLz0R3BX2myf0WBCSQh9A+py8PBo1dCzWIOcvisbyH6akNKqDHMgXePF2kir5mm5JXJTH3OUJYOQ==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
