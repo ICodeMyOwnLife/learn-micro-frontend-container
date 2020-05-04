@@ -1,44 +1,75 @@
-import React, { FC, memo, Fragment, lazy, Suspense } from 'react';
-import { Router, Route, Switch } from 'react-router';
-import { Link } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import React, { FC, memo, lazy, Suspense } from 'react';
+import { Route, Switch } from 'react-router';
+import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
 import { MicroFrontendRoute } from 'cb-react-micro-frontend';
-import routeProps from 'routeProps';
+import mfRouteProps from 'mfRouteProps';
+import theme from 'theme';
+import useStyles from './styles';
+import appRouteProps from 'appRouteProps';
+import ForwardRefNavLink from 'components/ForwardRefNavLink';
+import { subRouteProps1, subRouteProps2 } from 'subRouteProps';
+import logoSrc from './logo.png';
 
-const history = createBrowserHistory();
 const Login = lazy(() => import('containers/Login'));
 const ProductList = lazy(() => import('containers/ProductList'));
 
-export const AppComponent: FC = () => (
-  <Router history={history}>
-    <nav>
-      <Link to="/">Home</Link> |{' '}
-      {routeProps.map(({ microFrontendName, path }) => (
-        <Fragment key={microFrontendName}>
-          <Link to={path}>{microFrontendName}</Link> |{' '}
-        </Fragment>
-      ))}
-      <Link to="/login">Login</Link> | <Link to="/products">Products</Link>
-    </nav>
-    <nav>
-      <Link to="/micro-frontend-1/home">MF1/Home</Link> |{' '}
-      <Link to="/micro-frontend-1/contact">MF1/Contact</Link> |{' '}
-      <Link to="/micro-frontend-1/about">MF1/About</Link> |{' '}
-      <Link to="/micro-frontend-2/home">MF2/Home</Link> |{' '}
-      <Link to="/micro-frontend-2/contact">MF2/Contact</Link> |{' '}
-      <Link to="/micro-frontend-2/about">MF2/About</Link>
-    </nav>
-    <Suspense fallback="Loading ...">
-      <Switch>
-        <Route component={Login} path="/login" />
-        <Route component={ProductList} path="/products" />
-        {routeProps.map(props => (
-          <MicroFrontendRoute {...props} key={props.microFrontendName} />
+console.log(theme);
+
+export const AppComponent: FC = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar className={classes.header} component="header" position="sticky">
+        <Toolbar>
+          <Link className={classes.brand}>
+            <img className={classes.img} src={logoSrc} alt="Logo" />
+            <Typography variant="h6">MF CONTAINER</Typography>
+          </Link>
+          <div className={classes.pad} />
+          <nav className={classes.navbar}>
+            {appRouteProps.map(({ name, path }) => (
+              <Link
+                color="secondary"
+                component={ForwardRefNavLink}
+                to={path}
+                key={name}
+              >
+                {name}
+              </Link>
+            ))}
+          </nav>
+        </Toolbar>
+      </AppBar>
+
+      <nav className={classes.subNavbar}>
+        {subRouteProps1.map(({ name, path }) => (
+          <Link component={ForwardRefNavLink} key={name} to={path}>
+            {name}
+          </Link>
         ))}
-      </Switch>
-    </Suspense>
-  </Router>
-);
+      </nav>
+
+      <nav className={classes.subNavbar}>
+        {subRouteProps2.map(({ name, path }) => (
+          <Link component={ForwardRefNavLink} key={name} to={path}>
+            {name}
+          </Link>
+        ))}
+      </nav>
+
+      <Suspense fallback="Loading ...">
+        <Switch>
+          <Route component={Login} path="/login" />
+          <Route component={ProductList} path="/products" />
+          {mfRouteProps.map(props => (
+            <MicroFrontendRoute {...props} key={props.microFrontendName} />
+          ))}
+        </Switch>
+      </Suspense>
+    </div>
+  );
+};
 
 const App = memo(AppComponent);
 App.displayName = 'App';

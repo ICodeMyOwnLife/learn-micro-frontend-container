@@ -1,7 +1,7 @@
 import { MicroFrontendRouteProps } from 'cb-react-micro-frontend';
 import { MICRO_FRONTEND_1_HOST, MICRO_FRONTEND_2_HOST } from 'constants/hosts';
 
-const routeProps: MicroFrontendRouteProps[] = [
+const mfRouteProps: MicroFrontendRouteProps[] = [
   {
     host: MICRO_FRONTEND_1_HOST!,
     microFrontendName: 'micro-frontend-1',
@@ -14,4 +14,4 @@ const routeProps: MicroFrontendRouteProps[] = [
   },
 ];
 
-export default routeProps;
+export default mfRouteProps;

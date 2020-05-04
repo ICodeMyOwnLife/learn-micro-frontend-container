@@ -22,6 +22,11 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+cb-toolset@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/cb-toolset/-/cb-toolset-0.0.4.tgz#637393d932990695b647a7fe53707dc400626865"
+  integrity sha512-MhIkuhGrmj0k1zOfI1w3zVMAtg/js/Jj8ammAvSMJoH5OWtSMGOcU3WnMgZFRuZ6DmGohGRrfFi7FtGEhrBzBQ==
+
 chalk@^2.4.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"

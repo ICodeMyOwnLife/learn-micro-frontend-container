@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { bootstrapContainer } from 'cb-react-micro-frontend';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Root from 'Root';
 
 bootstrapContainer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root'),
 );
