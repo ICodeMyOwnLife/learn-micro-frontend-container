@@ -1,29 +1,26 @@
 import React, { FC, memo } from 'react';
-import { Router } from 'react-router';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, StylesProvider } from '@material-ui/core';
 import theme from 'theme';
 import jssInstance, { generateClassName, sheetManager } from 'jssInstance';
 import App from 'App';
 
-const history = createBrowserHistory();
-
 console.log(theme);
 
 export const RootComponent: FC = () => {
   return (
-    <StylesProvider
-      generateClassName={generateClassName}
-      jss={jssInstance}
-      sheetsManager={sheetManager}
-    >
-      <ThemeProvider theme={theme}>
-        <Router history={history}>
+    <BrowserRouter>
+      <StylesProvider
+        generateClassName={generateClassName}
+        jss={jssInstance}
+        sheetsManager={sheetManager}
+      >
+        <ThemeProvider theme={theme}>
           <CssBaseline />
           <App />
-        </Router>
-      </ThemeProvider>
-    </StylesProvider>
+        </ThemeProvider>
+      </StylesProvider>
+    </BrowserRouter>
   );
 };
 

@@ -1,4 +1,3 @@
-declare module '*.png' {
-  declare const src: string;
-  export default src;
+declare module '@material-ui/utils' {
+  export const ponyfillGlobal: any;
 }

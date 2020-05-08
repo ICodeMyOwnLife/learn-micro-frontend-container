@@ -1,1 +1,1 @@
-/// <reference types="react-scripts" />
+/// <reference types="cb-react-scripts-micro-frontend-container" />

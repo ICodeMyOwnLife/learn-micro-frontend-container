@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ponyfillGlobal } from '@material-ui/utils';
 import { bootstrapContainer } from 'cb-react-micro-frontend';
+import { calculate } from 'cb-math-fun';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Root from 'Root';
+
+console.log(calculate(4, 5));
+
+ponyfillGlobal['__@material-ui/styles-init__'] = Number.NEGATIVE_INFINITY;
 
 bootstrapContainer();
 
