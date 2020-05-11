@@ -1,4 +1,4 @@
-import { MicroFrontendRouteProps } from 'cb-react-micro-frontend';
+import { MicroFrontendRouteProps } from 'sp-ops-micro-frontend';
 import config from 'learn-micro-frontend-config';
 
 console.log(config);

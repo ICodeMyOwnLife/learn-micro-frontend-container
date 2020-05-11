@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ponyfillGlobal } from '@material-ui/utils';
 import { calculate } from 'cb-math-fun';
 import './index.css';
-import * as serviceWorker from './serviceWorker';
 import Root from 'Root';
+import * as serviceWorker from './serviceWorker';
 
 console.log(calculate(4, 5));
 
-ponyfillGlobal['__@material-ui/styles-init__'] = Number.NEGATIVE_INFINITY;
 
 ReactDOM.render(
   <React.StrictMode>

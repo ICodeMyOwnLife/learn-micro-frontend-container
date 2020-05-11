@@ -1,4 +1,4 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core';
+import { makeStyles, createStyles, Theme } from 'sp-ops-react-ui';
 
 const styles = ({ spacing }: Theme) =>
   createStyles({

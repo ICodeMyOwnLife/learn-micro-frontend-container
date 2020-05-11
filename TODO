@@ -1,16 +1,8 @@
-// TODO: Test with Mui and Theme Override
 // TODO: Test in other browsers
 // TODO: Test in production mode +/- remote server
   - Deploy container to remote server
 // TODO: Handle errors/exceptions
   - Fetch manifest and script.onerror
-
-// TODO: Split cb-react-micro-frontend into
-  - cb-react-micro-frontend
-  - cb-react-micro-frontend-container
-  - cb-react-micro-frontend-overrides contains webpack config override
-  - cb-react-micro-frontend-server contains proxy logic
-  - cb-react-micro-frontend-core
 
 
 

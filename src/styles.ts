@@ -1,4 +1,4 @@
-import { makeStyles, createStyles, Theme } from '@material-ui/core';
+import { makeStyles, createStyles, Theme } from 'sp-ops-react-ui';
 
 const styles = ({ spacing, zIndex }: Theme) =>
   createStyles({
@@ -23,17 +23,22 @@ const styles = ({ spacing, zIndex }: Theme) =>
     pad: {
       flex: 1,
     },
+    popover: {
+      padding: spacing(2),
+    },
     navbar: {
       display: 'grid',
       gridAutoFlow: 'column',
       gridGap: spacing(0, 2),
     },
-    subNavbar: {
-      display: 'grid',
-      gridAutoFlow: 'column',
-      gridGap: spacing(0, 2),
-      justifyContent: 'center',
-      marginTop: spacing(2),
+    navbarItem: {
+      width: 40,
+      height: 40,
+      padding: spacing(1),
+    },
+    navbarImg: {
+      maxWidth: '100%',
+      maxHeight: '100%',
     },
   });
 
