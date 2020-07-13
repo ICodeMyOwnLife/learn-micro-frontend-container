@@ -9,9 +9,10 @@ console.log(calculate(4, 5));
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Root />
-  </React.StrictMode>,
+  // </React.StrictMode>
+  ,
   document.getElementById('root'),
 );
 
